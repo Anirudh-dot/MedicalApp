@@ -10,8 +10,7 @@ import 'loginForm.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  // Uncomment this to use the auth emulator for testing
-  // await FirebaseAuth.instance.useEmulator('http://localhost:9099');
+  await FirebaseAuth.instance.useEmulator('http://localhost:9099');
   runApp(AuthExampleApp());
 }
 
@@ -19,7 +18,7 @@ class AuthExampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Firebase Example App',
+      title: 'Medical App',
       theme: ThemeData.light(),
       home: Scaffold(
         body: AuthTypeSelector(),
@@ -40,7 +39,7 @@ class AuthTypeSelector extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Test App'),
+        title: const Text('Medical App'),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +75,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Test App',
+      title: 'Medical App',
       theme: ThemeData(
         // This is the theme of your application.
         //

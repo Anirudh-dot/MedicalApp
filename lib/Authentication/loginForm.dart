@@ -116,8 +116,8 @@ class _LoginFormFormState extends State<LoginForm> {
         _success = true;
         _userEmail = user.email;
 
-        Navigator.of(context) /*!*/ .push(
-          MaterialPageRoute<void>(builder: (_) => ProfilePage(user: user)),
+        Navigator.of(context).push(
+          MaterialPageRoute<void>(builder: (_) => home(user: user)),
         );
       });
     } else {
